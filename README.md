@@ -221,3 +221,7 @@ public interface CoffeeComponent {
 
 }
 ```
+6- to create multiple modules 
+```java 
+@Component(modules = {CoffeeModule.class,   ,   ,    })
+```
