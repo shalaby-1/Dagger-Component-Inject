@@ -26,7 +26,7 @@ public class River {
 }
 ```
 3- create the class that will depend on the 2 previous classes  
-4- create an instance for the 2 classess and pass it to the constructor of  the first class  
+4- create an instance for the 2 classess and pass it to the constructor of  the master class  
 ```java
 public class Coffee {
     // depend on Farm and River class
