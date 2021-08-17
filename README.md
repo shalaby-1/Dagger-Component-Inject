@@ -180,7 +180,7 @@ public class River {
 ![image](https://user-images.githubusercontent.com/88387388/129785673-df12e01e-93d7-49d6-9b9e-c837cb6e93ca.png)
 - Dependency cycle using provides and module 
 ![image](https://user-images.githubusercontent.com/88387388/129785934-ebb5b912-bf60-4513-b2ea-ae97050ea8f9.png)
-- Using Dagger for a class from external library where we can not add inject keyword 
+- Using Dagger for a class from external library where we can not add inject keyword  
 1- create a module class for the master class  
 ```java
 public class CoffeeModule {
