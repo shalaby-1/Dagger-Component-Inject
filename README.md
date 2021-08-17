@@ -94,14 +94,14 @@ public class River {
   when to use it ?
   when there is a parameter that i need to use inside the class but it is NOT inside the constructor 
 - steps of field injection 
-  1- inside the master class remove parameters of the constructor and it is fields 
-  2- create a method that return data from the 2 classes 
+  1- inside the master class remove parameters of the constructor and it is fields  
+  2- create a method that return data from the 2 classes  
   ```java 
       public String getCoffeeCup(){
         
     }
   ```
-  3- create at each class a method that return data to the master class 
+  3- create at each class a method that return data to the master class  
   ```java
       public String getBeans(){
         return "beans";
