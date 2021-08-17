@@ -91,6 +91,43 @@ public class River {
         component.getCoffee();
 ```
 - Field injection and method Injection  
-- when to use it ?
+  when to use it ?
   when there is a parameter that i need to use inside the class but it is NOT inside the constructor 
-- steps 
+- steps of field injection 
+  1- inside the master class remove parameters of the constructor and it is fields 
+  2- create a method that return data from the 2 classes 
+  ```java 
+      public String getCoffeeCup(){
+        
+    }
+  ```
+  3- create at each class a method that return data to the master class 
+  ```java
+      public String getBeans(){
+        return "beans";
+    }
+  ```
+  ```java
+      public String getWater(){
+        return "water";
+    }
+  ```
+  4- return the data from the 2 classes 
+  ```java 
+        public String getCoffeeCup(){
+          return farm.getBeans()+ "+" + river.getWater();
+    }
+  ```
+  5- add inject annotation to the 2 fields inside the master class 
+  ```java
+    @Inject
+    Farm farm;
+    @Inject
+    River river;
+  ```
+  6- access method inside the master class using method that return object of it 
+  ```java
+        // Autamated Field dependency injection
+        CoffeeComponent component = DaggerCoffeeComponent.create();
+        Log.d(TAG, "onCreate: "+ component.getCoffee().getCoffeeCup());
+  ```
