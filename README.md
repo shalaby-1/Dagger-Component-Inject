@@ -39,7 +39,7 @@ public class Coffee {
     }
 }
 ```
-5- To add manual dependency injection  
+- To add manual dependency injection  
 ```java 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,4 +51,36 @@ public class Coffee {
 
         Coffee coffee = new Coffee(farm,river);
     }
+```
+- To add Automated dependency injection 
+1- create component interface 
+2- inside the interface create a function that return an object of the master class 
+3- mark it with a component annotation 
+```java 
+@Component
+public interface CoffeeComponent {
+    Coffee getCoffee();
+}
+```
+4- mark the constructor master class and the 2 classes that he depends on with inject annotation
+```java
+    @Inject
+    public Coffee(Farm farm, River river) {
+        this.farm = farm;
+        this.river = river;
+    }
+```
+```java 
+public class Farm {
+    @Inject
+    public Farm() {
+    }
+}
+```
+```java
+public class River {
+    @Inject
+    public River() {
+    }
+}
 ```
