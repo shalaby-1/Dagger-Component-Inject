@@ -84,3 +84,9 @@ public class River {
     }
 }
 ```
+5- add a reference to the interface inside main acitivity and use it to access the method to return object 
+```java
+        // Autamated dependency injection
+        CoffeeComponent component = DaggerCoffeeComponent.create();
+        component.getCoffee();
+```
