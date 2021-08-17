@@ -52,7 +52,7 @@ public class Coffee {
         Coffee coffee = new Coffee(farm,river);
     }
 ```
-- To add Automated dependency injection  
+- To add Automated dependency injection (Constructor injection)  
 1- create component interface  
 2- inside the interface create a function that return an object of the master class  
 3- mark it with a component annotation  
@@ -90,3 +90,7 @@ public class River {
         CoffeeComponent component = DaggerCoffeeComponent.create();
         component.getCoffee();
 ```
+- Field injection and method Injection  
+- when to use it ?
+  when there is a parameter that i need to use inside the class but it is NOT inside the constructor 
+- steps 
