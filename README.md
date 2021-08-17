@@ -135,3 +135,31 @@ public class River {
         CoffeeComponent component = DaggerCoffeeComponent.create();
         Log.d(TAG, "onCreate: "+ component.getCoffee().getCoffeeCup());
   ```
+  7- to acess master class directly without interface create a field for the class 
+```java
+    Coffee coffee;
+```
+  8- replace the method that return object with the object itself 
+```java 
+    CoffeeComponent component = DaggerCoffeeComponent.create();
+    Log.d(TAG, "onCreate: " + coffee.getCoffeeName());
+```
+  9- add inject annotation to the object 
+```java
+    @Inject
+    Coffee coffee;
+```
+  10- to make dagger know that we want to inject an activity inside the component interface create a method named inject receving the desired activity 
+  ```java
+      void inject(MainActivity mainActivity);
+  ```
+  11- inside the main activity pass instance of it to the component interface 
+  ```java
+         // Autamated dependency injection
+        CoffeeComponent component = DaggerCoffeeComponent.create();
+        // pass instance of the activity to the component interface
+        component.inject(this);
+        Log.d(TAG, "onCreate: " + coffee.getCoffeeName());
+  ```
+  
+  
