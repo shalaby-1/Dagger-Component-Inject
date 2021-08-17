@@ -225,3 +225,26 @@ public interface CoffeeComponent {
 ```java 
 @Component(modules = {CoffeeModule.class,   ,   ,    })
 ```
+- Summary of the app until now (Compile time)
+1- main activity needs an instance of the coffee class (dependent class)
+2- we inject the main activity into the component 
+3- we inject the parameter of the coffee class 
+4- we get fields of the dependency class from constructor & field injection & module and provides 
+- Dependency injection at Run time (taking input from the user / response from api )
+1- add a new field of a new dependency for the constructor of the dependent class 
+```java
+    int sugar;
+
+    // constructor injection
+    @Inject
+    public Coffee(int sugar) {
+        this.sugar = sugar;
+    }
+```
+2- create a new method inside the module returing the value of the new field and add provide annotation 
+```java
+    @Provides
+    int provideSugar(){
+        return 2;
+    }
+```
