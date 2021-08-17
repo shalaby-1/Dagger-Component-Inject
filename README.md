@@ -176,5 +176,7 @@ public class River {
         Log.d(TAG, "aly connectElectricity: connecting ...");
     }
   ```
+  - Adding dagger to a class from external library 
+  a class from a package we can not add inject annotation 
   
-  
+![image](https://user-images.githubusercontent.com/88387388/129785673-df12e01e-93d7-49d6-9b9e-c837cb6e93ca.png)
