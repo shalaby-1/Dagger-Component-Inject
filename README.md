@@ -161,5 +161,20 @@ public class River {
         component.inject(this);
         Log.d(TAG, "onCreate: " + coffee.getCoffeeName());
   ```
+- Method Injection  
+  used when there is a function we want to exceute every time we make an instance of a certain object  
+  1- create a method inside the master class 
+  ```java
+      public void connectElectricity(){
+        Log.d(TAG, "aly connectElectricity: connecting ...");
+    }
+  ```
+  2- just add inject annotation to the method and you will not need to acess it using object of the master class 
+  ```java
+    @Inject
+    public void connectElectricity(){
+        Log.d(TAG, "aly connectElectricity: connecting ...");
+    }
+  ```
   
   
