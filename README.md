@@ -2,14 +2,13 @@
 Steps to add Dagger  
 1- add Dagger Dependencies  
 ```
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
     implementation 'com.google.dagger:dagger:2.11'
-    annotationProcessor "com.google.dagger:dagger-compiler:2.11"
-    implementation "com.google.dagger:dagger-android:2.35.1"
     implementation 'com.google.dagger:dagger-android-support:2.11'
-    annotationProcessor 'com.google.dagger:dagger-android-processor:2.11'
     implementation 'javax.annotation:javax.annotation-api:1.3.2'
+
     annotationProcessor("javax.annotation:javax.annotation-api:1.3.2")
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.11'
+    annotationProcessor "com.google.dagger:dagger-compiler:2.11"
 ```
 1- create 2 classes  
 2- add an empty constructor for the 2 classes  
