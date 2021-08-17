@@ -15,12 +15,10 @@ Steps to add Dagger
 2- add an empty constructor for the 2 classes  
 ```java
 public class Farm {
-    @Inject
     public Farm() {
     }
 }
 public class River {
-    @Inject
     public River() {
     }
 }
@@ -33,7 +31,6 @@ public class Coffee {
     private Farm farm;
     private River river;
 
-    @Inject
     public Coffee(Farm farm, River river) {
         this.farm = farm;
         this.river = river;
