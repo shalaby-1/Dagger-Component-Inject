@@ -93,8 +93,13 @@ public class River {
 - Field injection and method Injection  
   when to use it ?
   when there is a parameter that i need to use inside the class but it is NOT inside the constructor 
-- steps of field injection 
+- steps of field injection  
   1- inside the master class remove parameters of the constructor and it is fields  
+  ```java
+    @Inject
+    public Coffee() {
+    }
+  ```
   2- create a method that return data from the 2 classes  
   ```java 
       public String getCoffeeCup(){
